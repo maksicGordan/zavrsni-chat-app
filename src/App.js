@@ -5,7 +5,9 @@ import Input from "./Components/Input";
 
 const channelId = "CZD7BYdGVK2AM6lb";
 
-var randomName = require('node-random-name'); 
+const channelName ="observable-room";
+
+let randomName = require('node-random-name'); 
 let randomColor = require("randomcolor");
 
 export default class App extends React.Component {
@@ -35,11 +37,12 @@ export default class App extends React.Component {
       this.setState({member});
     });
 
-    const room = this.drone.subscribe("observable-room");
-    room.on('data', (data, member) => {
+    const room = this.drone.subscribe(channelName);
+    room.on("message", (message) => {
+      const { data, id, member } = message;
       const messages = this.state.messages;
-      messages.push({member, text: data});
-      this.setState({messages});
+      messages.push({ id, member, text: data});
+      this.setState({ messages });
     });
 }
 
@@ -53,9 +56,6 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h1>Brzojav</h1>
-        </div>
         <Messages
           messages={this.state.messages}
           currentMember={this.state.member}

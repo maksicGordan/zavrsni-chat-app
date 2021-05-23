@@ -2,7 +2,7 @@ import React from "react";
 
 export default class Messages extends React.Component {
   render() {
-    const {messages} = this.props;
+    const messages = this.props.messages;
     return (
         <div className="messages">
           <ul>
@@ -25,17 +25,13 @@ export default class Messages extends React.Component {
     }
 
   renderMessage(message) {
-    const {member, text} = message;
-    const {currentMember} = this.props;
+    const {member, id, text} = message;
+    const currentMember = this.props.currentMember;
     const messageFromMe = member.id === currentMember.id;
     const className = messageFromMe ?
       "Messages-message currentMember" : "Messages-message";
     return (
-      <li className={className}>
-      <span
-        className="avatar"
-        style={{backgroundColor: member.clientData.color}}
-      />
+      <li key={id} className={className}>
         <div className="Message-content">
           <div className="username">
             {member.clientData.username}
@@ -46,4 +42,3 @@ export default class Messages extends React.Component {
     );
   }
 }
-

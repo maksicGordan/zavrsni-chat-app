@@ -1,4 +1,6 @@
 import React from "react";
+import '../Style/style.css';
+
 
 export default class Input extends React.Component {
     constructor (props) {
@@ -15,21 +17,25 @@ export default class Input extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
+        const trim = this.state.text.trim();
+        if(trim.length < 1) {
+            return;
+        }
         this.setState({text: ''});
-        this.props.onSendMessage(this.state.text);
+        this.props.onSendMessage(trim);
     }
 
     render() {
         return (
-            <div className='Input'>
+            <div>
             <form onSubmit={e => this.onSubmit(e)}>
                 <input
                 onChange={e => this.onChange(e)}
                 value={this.state.text}
                 type='text'
-                placeholder='Text'
+                placeholder='Enter your text'
                 />
-                <button>Send</button>
+                <button className='button'>Send</button>
             </form>
             </div>
     );

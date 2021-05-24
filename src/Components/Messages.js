@@ -1,35 +1,37 @@
-import React from "react";
+import React from 'react';
+import '../Style/style.css';
 
 export default class Messages extends React.Component {
   render() {
     const messages = this.props.messages;
     return (
-        <div className="messages">
+        <div className='list'>
           <ul>
             {messages.map((m) => this.renderMessage(m))}
             <div
               ref={(lastLi) => {
                 this.messagesEnd = lastLi;
               }}
-            ></div>
+            >
+            </div>
           </ul>
         </div>
       );
     }
     scrollToBottom = () => {
-      this.messagesEnd.current?.scrollIntoView({ behavior: "smooth" });
+      this.messagesEnd.scrollIntoView({ behavior: "auto" });
     };
   
     componentDidUpdate = () => {
       this.scrollToBottom();
     }
 
-  renderMessage(message) {
+  renderMessage = (message) => {
     const {member, id, text} = message;
     const currentMember = this.props.currentMember;
     const messageFromMe = member.id === currentMember.id;
     const className = messageFromMe ?
-      "Messages-message currentMember" : "Messages-message";
+      'Messages-message currentMember' : 'Messages-message';
     return (
       <li key={id} className={className}>
         <div className="Message-content">

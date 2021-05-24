@@ -1,0 +1,117 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+  background-image: url(./background.JPG);
+}
+
+.main .main-head {
+  background-color: #262626;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.Messages-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember .Message-content {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.Message-content .username {
+  display: block;
+  color: white;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.Message-content .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: #262626;
+  color: white;
+  display: inline-block;
+}
+
+.currentMember .Message-content .text {
+  background-color: #024229;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 70px;
+}
+
+input {
+  color: white;
+  background-color: #262626;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #024229;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #024229;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=style.css.map */

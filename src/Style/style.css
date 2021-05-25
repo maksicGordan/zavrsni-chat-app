@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+body {
+  background-image: url(./background.JPG);
+  background-attachment: fixed;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,21 +22,14 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
-  background-image: url(./background.JPG);
-}
-
-.main .main-head {
-  background-color: #262626;
-  width: 100%;
-  text-align: center;
-  color: white;
+  width: 100vw;
 }
 
 .list {
   padding: 20px 0;
   max-width: 900px;
   width: 100%;
-  margin: 0 auto;
+  margin: auto auto;
   padding-left: 0;
 }
 
@@ -55,9 +53,13 @@
 }
 
 .currentMember .Message-content {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.currentMember .Message-content .text {
+  background-color: #024229;
 }
 
 .Message-content .username {
@@ -70,22 +72,17 @@
 .Message-content .text {
   padding: 10px;
   max-width: 400px;
-  margin: 0;
   border-radius: 12px;
   background-color: #262626;
   color: white;
   display: inline-block;
 }
 
-.currentMember .Message-content .text {
-  background-color: #024229;
-}
-
 form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 100vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

@@ -19,7 +19,7 @@ export default class Messages extends React.Component {
       );
     }
     scrollToBottom = () => {
-      this.messagesEnd.scrollIntoView({ behavior: "auto" });
+      this.messagesEnd.scrollIntoView({ behavior: 'auto' });
     };
   
     componentDidUpdate = () => {

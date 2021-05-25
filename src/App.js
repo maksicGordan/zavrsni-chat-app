@@ -72,7 +72,6 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='main'>
-        <h1 className='main-head'>Seminarski rad - Gordan Maksic</h1>
         <Messages
           messages={this.state.messages}
           currentMember={this.state.member}

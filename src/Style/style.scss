@@ -1,7 +1,15 @@
+@import "./abstract/colors";
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body{
+    background-image: url(./background.JPG);
+    background-attachment: fixed;
 }
 
 .main {
@@ -9,21 +17,14 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background-image: url(./background.JPG);
-
-    .main-head {
-        background-color: #262626;
-        width: 100%;
-        text-align: center;
-        color: white;
-    }
+    width: 100vw;
 }  
   
 .list {
     padding: 20px 0;
     max-width: 900px;
     width: 100%;
-    margin: 0 auto;
+    margin: auto auto;
     padding-left: 0;
   }
   
@@ -44,7 +45,10 @@
   
 .currentMember {
     .Message-content {
-        align-items: flex-end;
+        align-items: flex-start;
+        .text {
+            background-color: $flexColor;
+        }
     }
 } 
  
@@ -52,7 +56,7 @@
 .Message-content {
     .username {
       display: block;
-      color: white;
+      color: $fontColor;
       font-size: 14px;
       padding-bottom: 4px;
     }
@@ -60,46 +64,37 @@
     .text {
       padding: 10px;
       max-width: 400px;
-      margin: 0;
       border-radius: 12px;
-      background-color: #262626;
-      color: white;
+      background-color: $color1;
+      color: $fontColor;
       display: inline-block;
-    }
-}
-  
-.currentMember { 
-    .Message-content {
-        .text {
-            background-color: rgb(2, 66, 41);
-        }
     }
 }
   
 
 form {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     max-width: 900px;
     margin: 0 auto 70px;
 }
   
 input {
-    color: white;
-    background-color: #262626;
+    color: $fontColor;
+    background-color: $color1;
     padding: 5px;
     font-size: 16px;
     border-radius: 8px;
-    border: 1px solid rgb(2, 66, 41);
+    border: 1px solid $flexColor;
     flex-grow: 1;
 }
   
 button {
     padding: 5px 10px;
     font-size: 16px;
-    background-color: rgb(2, 66, 41);
-    color: white;
+    background-color: $flexColor;
+    color: $fontColor;
     border: none;
     border-radius: 8px;
     margin-left: 10px;

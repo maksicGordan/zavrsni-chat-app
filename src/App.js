@@ -14,7 +14,6 @@ export default class App extends React.Component {
     super();
     this.state = {
       messages: [],
-      members:[],
       member: {
         username: randomName(),
       },
@@ -50,16 +49,6 @@ export default class App extends React.Component {
       this.setState({members});
     });
 
-    room.on('member_join', (member) => {
-      const memberJoin = this.state.members;
-      memberJoin.push({member});
-      this.setState({members: memberJoin});
-    });
-
-    room.on('member_leave', (member) => {
-      const memberLeave = this.state.members.filter((members) => members.id !== member.id);
-      this.setState(memberLeave);
-    });
 }
 
   onSendMessage = (message) => {

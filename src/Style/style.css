@@ -8,6 +8,7 @@
 body {
   background-image: url(./background.JPG);
   background-attachment: fixed;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .main {
@@ -48,10 +49,6 @@ body {
   text-align: right;
 }
 
-.Message-content {
-  display: inline-block;
-}
-
 .currentMember .Message-content {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -60,6 +57,10 @@ body {
 
 .currentMember .Message-content .text {
   background-color: #024229;
+}
+
+.Message-content {
+  display: inline-block;
 }
 
 .Message-content .username {
@@ -107,7 +108,7 @@ button {
   font-size: 16px;
   background-color: #024229;
   color: white;
-  border: none;
+  border: solid 1px #262626;
   border-radius: 8px;
   margin-left: 10px;
 }

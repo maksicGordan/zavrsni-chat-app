@@ -1,16 +1,6 @@
-@import "./abstract/colors";
+@import './abstract/colors';
+@import './base/reset';
 
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-image: url(./background.JPG);
-    background-attachment: fixed;
-}
 
 .main {
     display: flex;
@@ -39,9 +29,7 @@ body{
     }  
 }
   
-.Message-content {
-    display: inline-block;
-}
+
   
 .currentMember {
     .Message-content {
@@ -54,6 +42,7 @@ body{
  
   
 .Message-content {
+    display: inline-block;
     .username {
       display: block;
       color: $fontColor;
@@ -95,7 +84,7 @@ button {
     font-size: 16px;
     background-color: $flexColor;
     color: $fontColor;
-    border: none;
+    border: solid 1px $color1;
     border-radius: 8px;
     margin-left: 10px;
   }

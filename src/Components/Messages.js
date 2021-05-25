@@ -34,11 +34,11 @@ export default class Messages extends React.Component {
       'Messages-message currentMember' : 'Messages-message';
     return (
       <li key={id} className={className}>
-        <div className="Message-content">
-          <div className="username">
+        <div className='Message-content'>
+          <div className='username'>
             {member.clientData.username}
           </div>
-          <div className="text">{text}</div>
+          <div className='text'>{text}</div>
         </div>
       </li>
     );

@@ -3,9 +3,9 @@ import './Style/style.css';
 import Messages from './Components/Messages';
 import Input from './Components/Input';
 
-const channelId = "CZD7BYdGVK2AM6lb";
+const channelId = 'CZD7BYdGVK2AM6lb';
 
-const channelName ="observable-room";
+const channelName ='observable-room';
 
 let randomName = require('node-random-name'); 
 
